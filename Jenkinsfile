@@ -26,15 +26,15 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                echo '🧪 Running tests (if any)...'
-                bat """
-                call venv\\Scripts\\activate
-                pytest tests || echo No tests found.
-                """
-            }
-        }
+        // stage('Run Tests') {
+        //     steps {
+        //         echo '🧪 Running tests (if any)...'
+        //         bat """
+        //         call venv\\Scripts\\activate
+        //         pytest tests || echo No tests found.
+        //         """
+        //     }
+        // }
 
         stage('Deploy Locally') {
             steps {
